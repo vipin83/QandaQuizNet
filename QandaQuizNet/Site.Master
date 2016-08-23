@@ -1,0 +1,248 @@
+﻿<%@ Master Language="C#" AutoEventWireup="True" CodeBehind="Site.Master.cs" Inherits="QandaQuizNet.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Q&A Quiz">
+    <meta name="author" content="Q&A Quiz">
+    <title><%: Page.Title %> - Q&A Quiz</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <link rel="stylesheet" runat="server" href="~/Content/bootstrap.css" />
+    <link rel="stylesheet" runat="server" href="~/Content/main.css" />
+    <link rel="stylesheet" runat="server" href="~/Content/site.css" />
+    <link rel="stylesheet" runat="server" href="~/Content/icomoon.css" />
+    <link rel="stylesheet" runat="server" href="~/Content/animate-custom.css" />
+    <link rel="stylesheet" runat="server" href="~/Content/bootstrap-datetimepicker.css" />
+
+
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600,800' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <!-- google analytics code -->
+    <script type="text/javascript" src="/Scripts/GAnalytics.js" />
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            }; if (!f._fbq) f._fbq = n;
+            n.push = n; n.loaded = !0; n.version = '2.0'; n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)
+        }(window,
+        document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+
+        fbq('init', '1566075213683400');
+        fbq('track', "PageView");
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display: none"
+            src="https://www.facebook.com/tr?id=1566075213683400&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+<body style="padding:0px;">
+    <div class="container-fluid" style="padding:0px;height:auto;">
+
+        <div class="wrapper">
+
+        <form runat="server" style="height:100%;">
+            <asp:ScriptManager runat="server">
+                <Scripts>
+                    <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                    <%--Framework Scripts--%>
+                    <asp:ScriptReference Name="MsAjaxBundle" />
+                    <asp:ScriptReference Name="jquery" />
+                    <asp:ScriptReference Name="bootstrap" />
+                    <asp:ScriptReference Name="respond" />
+                    <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                    <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                    <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                    <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                    <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                    <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                    <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                    <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                    <asp:ScriptReference Name="WebFormsBundle" />
+                    <%--Site Scripts--%>
+                </Scripts>
+            </asp:ScriptManager>
+
+            <nav class="navbar navbar-default navbar-transparent navbar-fixed-top" style="padding-bottom: 0px; margin-bottom: 0px;">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                            <span style="font-size: 10px; font-weight: bold; text-align: left; color: #fff;">Menu</span>
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <div class="navbar-brand navbar-brand-centered visible-sm visible-xs">
+                            <a runat="server" href="~/Play" class="scroll-top" style="margin: 10px 0; font-size: 20px; font-weight: bold; color: #fff;">Q&A Quiz
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            <li><a runat="server" href="~/Play" class="scroll-top icon fa-home">Home</a></li>
+                            <li><a runat="server" href="~/Info#how-it-works" class="menu-scroll">How It Works</a></li>
+                            <li><a runat="server" href="~/Info#about-us" class="menu-scroll">About Us</a></li>
+                            <li><a runat="server" href="~/Info#odds" class="menu-scroll">Odds</a></li>
+                            <li><a runat="server" href="~/Info#top-ten" class="menu-scroll">Top Ten</a></li>
+                            <%--<li><a runat="server" href="~/Info#contact-us" class="menu-scroll">Contact Us</a></li>--%>
+
+                            <% if (Context.User.Identity.IsAuthenticated)
+                               {  %>
+                            <li class="dropdown" runat="server" id="adminMenuItem">
+                                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Admin <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a runat="server" href="~/Admin/AddQuiz">Add a Quiz</a></li>
+                                    <li><a runat="server" href="~/Admin/QuizList">Quiz List</a></li>
+                                    <li><a runat="server" href="~/Admin/UserList">User List</a></li>
+                                </ul>
+                            </li>
+                            <%--<li><a runat="server" href="~/Play">Play</a></li>--%>
+                            <% } %>
+                        </ul>
+
+                        <asp:LoginView runat="server" ViewStateMode="Disabled" ID="loginViewControl">
+                            <AnonymousTemplate>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a runat="server" href="~/Account/Register" class="icon fa-pencil fa-md">Register</a></li>
+                                    <li><a runat="server" href="~/Account/Login" class="icon fa-user fa-md">Log in</a></li>
+                                </ul>
+                            </AnonymousTemplate>
+                            <LoggedInTemplate>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a runat="server" href="~/Account/TopupAccount" title="Top up account balance">
+                                        <asp:Label ID="lblAccountBalanceText" runat="server">Balance: <%: AccountBalance %></asp:Label>
+                                    </a>
+                                    </li>
+                                    <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.Name  %> !</a></li>
+                                    <li>
+                                        <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                    </li>
+                                </ul>
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+
+                    </div>
+
+
+                    <!-- /.navbar-collapse -->
+                </div>
+                <!-- /.container-fluid -->
+            </nav>
+
+            <div class="container-fluid body-content" style="margin: 0px; padding: 0px;margin-top:50px;padding-left:4px;">
+
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </form>
+
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+
+
+        <%--<script type="text/javascript" src="<%=ResolveUrl("~/scripts/retina.js")%>"></script>--%>
+
+        <script>
+            //Custom jQuery by Jason Long www.northgatewebhosting.co.uk
+
+            $('.menu-scroll').click(function (e) {
+                // target element id
+                var id = $(this).attr('href');
+
+                console.log('clicked');
+
+                // target element
+                var $id = $(id);
+
+                if ($id.length === 0) {
+                    return;
+                }
+
+                // prevent standard hash navigation (avoid blinking in IE)
+                e.preventDefault();
+
+                // top position relative to the document
+                var pos = $(id).offset().top;
+
+                // animated top scrolling
+                $('body, html').animate(
+                    {
+                        scrollTop: pos
+                    }, 500
+                );
+            });
+
+        </script>
+
+        <asp:ContentPlaceHolder ID="scriptTemplate" runat="server">
+        </asp:ContentPlaceHolder>
+        
+        
+            <div class="push"></div>
+      </div>
+
+        <footer class="footer">
+            <div id="footerwrap">
+                <div class="container-fluid">
+                    <div class="row copyright">
+
+                        <div class="col-md-6 col-md-push-6 text-center-align-tablet hidden-xs" style="text-align: right;">
+                            <ul class="qanda-footer-menu">
+                                <li><a runat="server" href="~/Play" class="scroll-top">Home</a></li>
+                                <li><a runat="server" href="~/Info#how-it-works" class="menu-scroll">How It Works</a></li>
+                                <li><a runat="server" href="~/Info#about-us" class="menu-scroll">About Us</a></li>
+                                <li><a runat="server" href="~/Info#odds" class="menu-scroll">Odds</a></li>
+                                <li><a runat="server" href="~/Info#top-ten" class="menu-scroll">Top Ten</a></li>
+                                <li><a runat="server" href="mailto:info@qandaquiz.com" class="menu-scroll">Contact Us</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-4 col-md-pull-6 text-center-align-tablet">
+                            Copyright &copy; <%: DateTime.Now.Year %> Q&A Quiz.&nbsp;All Rights Reserved.<br />				            
+                            Contact us at <a href="mailto:info@qandaquiz.com" class="mailLink">info@qandaquiz.com</a>
+                        </div>
+
+                        <div class="col-md-2 col-md-pull-6  text-center-align-tablet">
+                            <span>Follow us on</span>
+                            &nbsp;
+                            <a href="https://www.facebook.com/QandAQuiz/" target="_blank" title="follow us on Facebook" class="icon fa-facebook fa-2x facebookIcon"></a>
+                            <a href="https://twitter.com/qandaquiz" target="_blank" title="follow us on Twitter" class="icon fa-twitter fa-2x twitterIcon"></a>
+                            <a href="https://medium.com/@QandAQuiz" target="_blank" title="follow us on Medium" class="icon fa-medium fa-2x"></a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

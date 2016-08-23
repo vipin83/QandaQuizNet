@@ -1,0 +1,586 @@
+
+/* ==========================================================================
+   Base Styles and Bootstrap Modifications
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+/*body {
+    font-size: 1em;
+    line-height: 1.4;
+
+}*/
+
+
+
+::-moz-selection {
+    background: #ffc843;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background: #ffc843;
+    color: #fff;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+ /*hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}*/
+
+
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+ textarea {
+    resize: vertical;
+}
+
+.clear-block {
+    display: inline;
+}
+.header-logo {
+    text-align: center;
+}
+
+/* ==========================================================================
+   General styles
+   ========================================================================== */
+
+html,
+body {
+    height: 100%;
+    
+}
+
+body {
+    font-family: "Open Sans";
+    font-weight: 400;
+    /*font-size:16px;*/
+    color: #555;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+#fixed-navbar {
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+}
+
+.modal-header {
+	background: #3498db;
+}
+
+.modal-header h4 {
+	color: white;
+}
+
+.modal-footer {
+	background: #2b2b2b;
+}
+
+
+
+.navbar-default {
+    border-color: transparent;
+    background-color: #046a38;/*#6bebf7*/
+}
+
+.navbar-transparent {
+    color: #fff;
+    background-color: #046a38;
+}
+
+.navbar-toggle {
+    border-color: transparent;
+    border: 0px solid transparent;
+   
+}
+
+.navbar-default .navbar-nav > li > a  {
+    color: white;
+    font-weight: 400;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+	background-color: #0033A0;/*#168ec5;*/
+	color: white;
+}
+
+
+
+/*hr {
+    position: relative;
+    border: none;
+}
+
+hr:before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 25%;
+    width: 50%;
+    height: 2px;
+    background: #ccc;
+}*/
+
+
+/* Titles */
+h1, h2/*, h3, h4, h5, h6 {*/
+{
+    font-family: "Open Sans";
+    font-weight: 700;
+    /*color: #fff;*/
+}
+
+.blue-bg h1, .blue-bg h2{
+    color:#fff;
+}
+
+
+/* Paragraph & Typographic */
+p {
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+
+.centered {
+    text-align: center;
+}
+
+.paragraph-lead {
+    font-size: 20px;
+    color: #3498db;
+}
+
+strong {
+    font-weight: 700;
+}
+
+em {
+    font-weight: 300;
+}
+
+pre {
+    background: #ebebeb;
+    border: none;
+    font-family: "Monaco";
+    font-size: 16px;
+    color: #666;
+    padding: 20px;
+    line-height: 28px;
+}
+
+small {
+    font-size: 12px;
+}
+
+blockquote,
+blockquote p {
+    line-height: 28px;
+    color: #999;
+    font-weight: 300;
+    font-style: italic;
+}
+
+blockquote {
+    position: relative;
+    margin: 0 0 40px -30px;
+    padding-left: 30px;
+    border-left: 5px solid #3498db;
+}
+
+blockquote cite {
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+    font-size: 12px;
+    font-style: italic;
+    color: #333;
+    font-weight: 300;
+}
+
+blockquote cite:before {
+    content: "-- "
+}
+
+/* Images */
+.overflow-image {
+    margin-top: -65px;
+}
+
+/* Links */
+a {
+    color: #3498db;
+    word-wrap: break-word;
+
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+a:hover,
+a:focus {
+    color: #c0392b;
+    text-decoration: none;
+    outline: 0;
+}
+
+a:before,
+a:after {
+    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+    transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+
+
+@media (max-width: 768px) {
+
+    .img-center-align-mobile {
+        margin: 10px auto 30px auto;
+    }
+    .text-center-align-mobile {
+        text-align: center !important;
+    }
+    .hero-right-text {
+        margin-top: 0 !important;
+        text-align: center;
+    }
+    .img-phone-hand {
+        margin: 0 auto;
+      
+    }
+    .img-iphone {
+        margin: 0 auto 30px auto !important;
+    }
+
+} 
+
+
+@media (max-width: 992px) {
+
+
+    .hero-right-text {
+        margin-top: 0 !important;
+        text-align: center;
+    }
+    .img-phone-hand {
+        margin: 0 auto !important;
+    }
+    .img-app-icons {
+        margin: 0 auto 20px auto !important;
+    }
+    .text-center-align-tablet {
+        text-align: left !important;       
+    }
+
+} 
+
+
+/* ==========================================================================
+   Wrap Sections
+   ========================================================================== */
+
+#headerwrap {
+    background-color: #f2f2f2 !important;
+}
+
+#herowrap {
+	background: url(/images/qandaquiz_bg.jpg) no-repeat center top;
+	padding-top:10px;
+
+	background-attachment: relative;
+	background-position: center center;
+	width: 100%;
+	
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+h1 {
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.phone-hand {
+    margin-top: 100px;
+}
+
+.hero-right-text {
+    margin-top: 100px;
+}
+
+.hero-right-text-transparent-black {
+    background-color: #0033A0; /*rgba( 04, 106, 56, 01 );*/
+    padding: 8px 20px;
+    display: inline-block;
+    color: #fff;
+    font-size: 30px;
+}
+
+.blue-bg {
+    background-color: #0033A0;/*#168ec5;*/
+    padding: 0px 20px 8px 20px;
+    display: inline-block;
+}
+
+.font-light {
+    font-weight: 300;
+}
+
+.white-row {
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+.top-row {
+    background-color: #fff;
+    padding-top: 10px;
+    padding-bottom:0px;
+}
+
+.blue-row {
+    background-color: #0033A0;/*#168ec5;*/
+    padding: 40px 0;
+    color: #fff;
+    font-size: 22px;
+    font-weight: 300;
+}
+
+.every-qanda-center {
+    font-size: 25px;
+    /*text-align: center;*/
+    color: #000;
+}
+
+h2.how-qanda-works {
+    text-align: center;
+    color: #000;
+    font-weight: 300;
+    margin-bottom: 50px;
+    
+}
+
+h2.about-us {
+    text-align: center;
+    color: #000;
+    font-weight: 300;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+
+h3.example {
+    color: #168ec5;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 18px;
+}
+
+.example-text {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: right;
+}
+.about-us-text {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 24px;
+    text-align: left;
+}
+
+ul.qanda-check-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+ul.qanda-check-list li {
+    margin-top: 20px;
+    background-image: url(/images/qandaquiz-bullet-tick.png);
+    background-repeat: no-repeat;
+    padding-left: 45px;
+}
+
+#herowrap p {
+	color:#ffffff;
+    line-height: 20px;
+}
+
+#footerwrap {
+	background: #142d38;
+	margin-top: 40px;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	text-align: left;
+    color: #416778;
+    font-size: 12px;
+}
+
+ul.qanda-footer-menu {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul.qanda-footer-menu li {
+    display: inline;
+    margin-left: 20px;
+}
+
+ul.qanda-footer-menu li a {
+    color: #fff;/*#416778;*/
+}
+
+ul.qanda-footer-menu li a:hover {
+    color: #fff;
+}
+
+ul.qanda-footer-menu li:first-child {
+    margin-left: 0;
+}
+
+/* ==========================================================================
+   Form styles
+   ========================================================================== */
+
+.input-box,
+.input-textarea {
+    border: 1px solid #cccccc;
+    margin: 0 !important;
+    height: 50px;
+    border-radius: 0;
+}
+
+.input-textarea {
+    height: 150px !important;
+}
+
+.btn-solid-green {
+    background-color: #046a38;/*#6bebf7*/
+    border-radius: 0;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    width: 200px;
+    height: 50px;
+    float: right;
+    margin-top:0;
+}
+
+::-webkit-input-placeholder {
+   color: #242d50;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #242d50;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #242d50;  
+}
+
+:-ms-input-placeholder {  
+   color: #242d50;  
+}
+
+
+#contact-us {
+    padding: 30px 0 0 0;
+}   
+
+
+#contact-us .contact-us-form {
+    position: relative;
+    margin-top: 40px;
+    margin-bottom: 70px;
+    background-color: #efefef;
+    border: 2px solid #caccc4;
+    border-radius: 3px;
+    padding: 20px;
+}
+
+#contact-us .contact-us-form-header {
+    color: #2a3560;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    font-size: 19px;
+}
+
+#contact-us .contact-us-form .submit-button {
+
+}
+
+
+
+
+@keyframes anim-rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.spinner {
+    display: inline-block;
+    font-size:4em;
+    height: 1em;
+    line-height: 1;
+    margin: .5em;
+    animation: anim-rotate 2s infinite linear;
+    color: #fff;
+    text-shadow: 0 0 .25em rgba(255,255,255, .3);
+}
+.spinner--steps {
+    animation: anim-rotate 1s infinite steps(8);
+}
+.spinner--steps2 {
+    animation: anim-rotate 1s infinite steps(12);
+}
+
+.copyright
+{
+    color:#fff;
+    font-weight:bold;
+}

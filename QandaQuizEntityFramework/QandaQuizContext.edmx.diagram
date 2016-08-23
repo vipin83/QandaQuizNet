@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a489ea86499f404f97775f6033aa18b8" Name="Diagram1">
+        <EntityTypeShape EntityType="QandaQuizNetModel.AspNetRole" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="QandaQuizNetModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="3" IsExpanded="false" />
+        <EntityTypeShape EntityType="QandaQuizNetModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="6.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="QandaQuizNetModel.AspNetUser" Width="1.5" PointX="3" PointY="6.125" IsExpanded="false" />
+        <EntityTypeShape EntityType="QandaQuizNetModel.QuizAnswer" Width="1.5" PointX="9.75" PointY="12.375" IsExpanded="false" />
+        <EntityTypeShape EntityType="QandaQuizNetModel.QuizDetail" Width="1.5" PointX="5.25" PointY="8.25" IsExpanded="false" />
+        <EntityTypeShape EntityType="QandaQuizNetModel.QuizPlayDetail" Width="1.5" PointX="12" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="QandaQuizNetModel.QuizQuestion" Width="1.5" PointX="7.875" PointY="10.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="QandaQuizNetModel.TopupAccount" Width="1.5" PointX="5.25" PointY="12.5" IsExpanded="false" />
+        <EntityTypeShape EntityType="QandaQuizNetModel.userCountry" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="false" />
+        <AssociationConnector Association="QandaQuizNetModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="QandaQuizNetModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" ManuallyRouted="false" />
+        <AssociationConnector Association="QandaQuizNetModel.FK_dbo_AspNetUsers_dbo_userCountries_country_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="QandaQuizNetModel.FK_dbo_QuizDetails_dbo_AspNetUsers_quizWinnerId" ManuallyRouted="false" />
+        <AssociationConnector Association="QandaQuizNetModel.FK_dbo_QuizPlayDetail_dbo_AspNetUsers_user_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="QandaQuizNetModel.FK_dbo_TopupAccounts_dbo_AspNetUsers_user_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="QandaQuizNetModel.FK_dbo_QuizAnswers_dbo_QuizQuestions_quizQuestionId" ManuallyRouted="false" />
+        <AssociationConnector Association="QandaQuizNetModel.FK_dbo_QuizPlayDetail_dbo_QuizAnswer_quizAnswer_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="QandaQuizNetModel.FK_dbo_QuizPlayDetail_dbo_QuizDetail_quiz_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="QandaQuizNetModel.FK_dbo_QuizQuestions_dbo_QuizDetails_Id" ManuallyRouted="false" />
+        <AssociationConnector Association="QandaQuizNetModel.AspNetUserRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="QandaQuizNetModel.LogEntry" Width="1.5" PointX="0.75" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

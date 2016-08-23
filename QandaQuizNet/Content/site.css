@@ -1,0 +1,600 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="select"] {
+    max-width: 280px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .body-content {
+        padding: 0;
+    }
+}
+
+.OverrrideBootStrapLeftMarginForCheckBox > input[type="checkbox"] {
+    margin-left: 0px;
+}
+
+.OverrideBootStrapLeftPadding {
+    padding-left: 0px;
+}
+
+
+.DangerText {
+    color: #d9534f;
+    font-weight: bolder;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    font-weight: bold;
+}
+
+/* Marquee - start*/
+/* define the animation */
+@-webkit-keyframes marqueeDownUp {
+    0% {
+        -webkit-transform: translate(30%, 40%);
+        -moz-transform: translate(30%, 40%);
+    }
+
+    100% {
+        -webkit-transform: translate(30%, -200%);
+        -moz-transform: translate(30%, -200%);
+    }
+}
+
+@keyframes marqueeDownUp {
+    0% {
+        -webkit-transform: translate(30%, 40%);
+        -moz-transform: translate(30%, 40%);
+    }
+
+    100% {
+        -webkit-transform: translate(30%, -100%);
+        -moz-transform: translate(30%, -100%);
+    }
+}
+
+/* define your limiting container */
+.marqueeDownUp {
+    border: solid 0px;
+    /*white-space: nowrap;*/
+    overflow: hidden;
+    box-sizing: border-box;
+    height: 50vh;
+}
+
+/* this is the tray moving around your container */
+.marqueeDownUp span {
+    display: inline-block;
+    padding-top: 80px;
+    text-indent: 0;
+    animation: marqueeDownUp 40s linear infinite; /* here you select the animation */
+    -webkit-animation: marqueeDownUp 40s linear infinite; /* here you select the animation */
+    white-space: normal;
+    margin-left: -60px;
+}
+
+/* pause the animation on mouse over */
+.marqueeDownUp span:hover {
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+}
+
+
+/*Up-down scroll text */
+
+@-webkit-keyframes marqueeUpDown {
+    0% {
+        -webkit-transform: translate(0%, -200%);
+        -moz-transform: translate(0%, -200%);
+    }
+
+    100% {
+        -webkit-transform: translate(0%, 40%);
+        -moz-transform: translate(0%, 40%);
+    }
+}
+
+@keyframes marqueeUpDown {
+    0% {
+        -webkit-transform: translate(0%, -100%);
+        -moz-transform: translate(0%, -100%);
+    }
+
+    100% {
+        -webkit-transform: translate(0%, 40%);
+        -moz-transform: translate(0%, 40%);
+    }
+}
+
+.marqueeUpDown {
+    border: solid 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    box-sizing: border-box;
+    height: 30vh;
+}
+
+/* this is the tray moving around your container */
+.marqueeUpDown span {
+    display: inline-block;
+    padding-top: 80px;
+    text-indent: 0;
+    animation: marqueeUpDown 30s linear infinite; /* here you select the animation */
+    -webkit-animation: marqueeUpDown 30s linear infinite; /* here you select the animation */
+}
+
+/* pause the animation on mouse over */
+.marqueeUpDown span:hover {
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+}
+/* Marquee - end*/
+
+
+/*Answer radio buttons style*/
+#donate {
+    width: 100%;
+    margin: 4px;
+    margin-top: 0px;
+    float: left;
+}
+
+#donate label {
+    float: left;
+    width: 100%;
+    min-width: 180px;
+    margin: 4px;
+    background-color: #EFEFEf;
+    border-radius: 10px;
+    border: 2px solid #fff;
+    overflow: auto;
+}
+
+.message {
+    font-size: 2.5em;
+    text-align: center;
+    color: red;
+    font-weight: bold;
+}
+
+.submitButton {
+    margin: 10px;
+}
+
+ #donate label span {
+    text-align: center;
+    font-size: 1.25em;
+    padding: 5px 5px;
+    display: block;
+    color: #fff;
+}
+
+@media screen and (max-width: 767px) {
+    #donate label {
+        /*min-width: 250px;*/
+        margin: 0px;      
+    }
+
+    #donate label span {
+        font-size: 1em;
+    }
+
+    .submitButton {
+        margin-top: -2px;
+    }
+
+    .message {
+        font-size: 1em;
+        text-align: center;
+        color: red;
+        font-weight: bold;
+    }
+
+    .btn-lg, .btn-group-lg > .btn {
+        padding: 2px 2px;
+        font-size: 1em;
+    }
+}
+
+#donate label input {
+    position: absolute;
+    top: -20px;
+    display: none;
+}
+
+#donate input:checked + span {
+    background-color: #046a38;
+    color: #fff;
+}
+
+#donate .blue {
+    background-color: #0033A0;
+    color: #fff;
+}
+
+.quizQuestion {
+    font-size: larger;
+    font-weight: bold;
+    margin-top:10px;
+    /*height:15%;*/
+}
+
+hr {
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(04, 106, 56, 01);
+}
+
+.alignClockCenter {
+    text-align: center;
+}
+
+.clock {
+    display: inline-block;
+    width: auto;
+}
+
+span[id *= 'noAnswerSelected'] {
+    font-weight: bold;
+    color: #d9534f;
+}
+
+.customBtn {
+    width: 100%;
+}
+
+.blink_me {
+    font-weight: bold;
+    color: #d9534f;
+    vertical-align: central;
+    margin: 20px;
+}
+
+.icon::before {
+    display: inline-block;
+    margin-right: .5em;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+}
+
+.facebookIcon:link, .facebookIcon:visited {
+    color: #3B5998;
+}
+
+.facebookIcon:hover {
+    color: #fff;
+}
+
+.twitterIcon:link, .twitterIcon:visited {
+    color: #4099FF;
+}
+
+.twitterIcon:hover {
+    color: #fff;
+}
+
+.FollowfacebookIcon:link, .FollowfacebookIcon:visited {
+    color: #3B5998;
+}
+
+.FollowfacebookIcon:hover {
+    color: #c0392b;
+}
+
+.FollowtwitterIcon:link, .FollowtwitterIcon:visited {
+    color: #4099FF;
+}
+
+.FollowtwitterIcon:hover {
+    color: #c0392b;
+}
+
+@media screen and (min-width: 768px) {
+    .quizsection {
+        height: 100vh;
+    }
+
+    .customBtn {
+        width: 98%;
+    }
+}
+
+.quizsection {
+    background-color: RGB(240,239,237);    
+}
+
+.quizLogoOpen {
+    background-color: RGB(200,210,214);
+    height: 40vh;
+}
+
+.quizComingSoon {
+    background-color: RGB(133,152,167);
+    height: 60vh;
+}
+
+.quizCountdownTimer {
+    background-color: RGB(172,185,196);    
+}
+
+.quizPastWinner {
+    background-color: RGB(240,239,237);
+    height: 40vh;
+}
+
+.followUsSection {
+    background-color: RGB(172,185,196);
+    height: 20vh;
+}
+
+
+.rowOne {
+    /*height: 65vh;*/
+}
+
+.rowTwo {
+    /*height: 35vh;*/
+}
+
+@media only screen and (max-width: 767px) {
+    .countdownTimer {
+        zoom: 1.0;
+        -moz-transform: scale(1.0);
+        -webkit-transform: scale(1.0); /*0.95*/
+        align-content: center;
+    }
+
+    .rowOne {
+        /*height: 85vh;*/
+    }
+
+    .rowTwo {
+        /*height: 20vh;*/
+    }
+
+    .quizQuestion {
+        font-size: 1em;
+        font-weight: bold;
+        height: 15%;
+    }
+}
+
+.countdownTimer {
+}
+
+html, body {
+    height: 100%;
+}
+/* Desktops and laptops ----------- */
+
+@media only screen and (min-width : 1224px) {
+
+    body {
+        font-size: 1.5em;
+    }
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1824px) {
+    body {
+        font-size: 1.8em;
+    }
+}
+
+.answerFeedback {
+    margin-top: 10px;
+}
+
+.correctAnswer {
+    color: green;
+    font-size: 1.25em;
+}
+
+.IncorrectAnswer {
+    color: #DF3232;
+    font-size: 1.25em;
+}
+
+
+.competitionOpenText {
+    text-align: center;
+    font: bold 50px Sans-Serif;
+    /*padding: 50px 0;*/
+    /*background-color: #edde9c;*/
+    color: #d9534f;
+    text-shadow: 0 1px 0px #378ab4, 1px 0 0px #5dabcd, 1px 2px 1px #378ab4, 2px 1px 1px #5dabcd, 2px 3px 2px #378ab4, 3px 2px 2px #5dabcd, 3px 4px 2px #378ab4, 4px 3px 3px #5dabcd, 4px 5px 3px #378ab4, 5px 4px 2px #5dabcd, 5px 6px 2px #378ab4, 6px 5px 2px #5dabcd, 6px 7px 1px #378ab4, 7px 6px 1px #5dabcd, 7px 8px 0px #378ab4, 8px 7px 0px #5dabcd;
+    position: absolute;
+    top: 40%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    margin-top: -20px;
+    margin-left: -40px;
+}
+
+.openBlinkText {
+    text-align: center;
+    font: bold 50px Sans-Serif;
+    /*padding: 50px 0;*/
+    /*background-color: #edde9c;*/
+    color: #d9534f;
+    text-shadow: 0 1px 0px #378ab4, 1px 0 0px #5dabcd, 1px 2px 1px #378ab4, 2px 1px 1px #5dabcd, 2px 3px 2px #378ab4, 3px 2px 2px #5dabcd, 3px 4px 2px #378ab4, 4px 3px 3px #5dabcd, 4px 5px 3px #378ab4, 5px 4px 2px #5dabcd, 5px 6px 2px #378ab4, 6px 5px 2px #5dabcd, 6px 7px 1px #378ab4, 7px 6px 1px #5dabcd, 7px 8px 0px #378ab4, 8px 7px 0px #5dabcd;
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    /*margin-top: -20px;*/
+    margin-left: -40px;
+    top: 65%;
+}
+
+
+.OddsOfWinningText{
+    margin-left:-40px;
+    text-align:left;
+    font:bold 0.75em Sans-Serif;
+    position: absolute;
+    top:75%;
+}
+
+/*ipad landscape*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+    .competitionOpenText {
+        font: bold 35px sans-serif;
+        margin-left: -20px;
+    }
+
+    .openBlinkText {
+        top: 60%;
+    }
+}
+
+/*iPad*/
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    .competitionOpenText {
+        font: bold 25px sans-serif;
+        margin-left: -20px;
+    }
+
+    .openBlinkText {
+        top: 60%;
+    }
+
+    .quizLogoOpen {
+        height: 25vh;
+    }
+
+    .quizComingSoon {
+        height: 70vh;
+    }
+
+    .quizPastWinner {
+        height: 50vh;
+    }
+
+    .marqueeDownUp span {
+        margin-left: -30px;
+    }
+}
+
+
+.row-eq-height {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.PrizeMoneyAnnouncement {
+    font-weight: bold;
+    color: #d9534f;
+    vertical-align: central;
+    margin: 20px;
+}
+
+
+
+@media only screen and (max-width: 767px) {
+    .PrizeMoneyAnnouncement {
+        font-weight: bold;
+        color: #d9534f;
+        vertical-align: central;
+        margin: 20px;
+    }
+}
+
+
+
+
+
+.freePlayText {
+    color: #d9534f;
+    font-weight: bold;
+}
+
+.oddsLinkOnPlay {
+    margin-top: -20px;
+    margin-bottom: 5px;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+
+form {
+    height: 100%;
+}
+
+.wrapper{
+    min-height: 100%;
+    height: 100%;
+    margin: 0 auto -4em;
+}
+
+.footer, .push {
+height: 4em;
+}
+
+#footerwrap{
+    padding-top: 10px; 
+    padding-bottom: 10px; 
+    margin-top: 0px;
+}
+
+
+.externalLoginButton{
+    background:none;
+    border:0px;
+    margin:5px;
+
+}
+.socialLoginButton {
+    cursor:pointer;
+    color:transparent;
+    border:none;  
+}
+
+.socialLoginButton.facebook {
+    background:url("/images/loginFacebook.png") no-repeat;
+}
+.socialLoginButton.google {
+    background:url("/images/loginGoogle.png") no-repeat;
+}
+
+#parent{
+    width:75px;
+}
+#parent img{
+    max-width:100%;
+    height:auto;
+}
